@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+header {
+  display: inline;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-bottom: 12px;
+  z-index: 1;
+}
+.navbar li {
+  display: inline;
+  list-style: none;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: rgb(4, 0, 255);
+}
+
+.navbar-nav {
+  padding-bottom: 12px;
+}
+
+.navbar .btn-icon {
+  display: none;
+}
+
+.header-image:before {
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #021927;
+}
+.header-text {
+  color: #ffff !important;
+  position: absolute;
+  width: 100%;
+  padding: 0 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.header-image {
+  background-image: url("img/HEADER.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 75vh;
+  font-size: 25px;
+  text-align: center !important;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #222222;
+  border: none;
+  border-radius: 15px;
+}
+.button:hover {
+  background-color: #16b0ec;
+}
+
+.button:active {
+  background-color: #16b0ec;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+main {
+  margin-top: 20px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  margin-bottom: 20px;
+}
+
+article .judul,
+article table {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+main .content {
+  width: 70%;
+  float: left;
+  margin-right: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+article img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s ease;
+  border-radius: 30px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.5rem;
+}
+
+article img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+aside {
+  width: 29%;
+  float: right;
+  /* position: fixed; */
+}
+
+.img-rounded {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  font-weight: 500;
+  text-align: center;
+  clear: both;
+  position: relative;
+  margin-top: -200px;
+}
+.sticky {
+  position: fixed;
+  top: 10%;
+  left: 70%;
+  margin: 20px 20px 0px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  main .content,
+  aside {
+    width: 100%;
+    padding: 0;
+    
+  }
+
+  .sticky {
+    position: unset;
+    margin: 0;
+    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar ul li a {
+    display: none;
+  }
+  .navbar-nav .home {
+    display: block;
+  }
+  .navbar .btn-icon {
+    display: block;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding: 14px;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #fff;
+    float: right;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-nav.responsive {
+    position: relative;
+  }
+  .navbar-nav.responsive .btn-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
